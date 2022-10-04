@@ -1,0 +1,27 @@
+.container2{
+    margin-left:8rem;
+    justify-content: center;
+    display:flex;
+}
+.streaming{
+    height:15rem;
+    width:22rem;
+    margin-right:1.5rem;
+}
+.con2-body{
+    margin:1rem 4rem 2rem 0rem;
+
+}
+.text-green{
+    color: rgba(123,164,53,255);
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+
+}
+.con2-text{
+    color: white;
+    margin-bottom: 1rem;
+}
+li{
+    list-style: none;
+}

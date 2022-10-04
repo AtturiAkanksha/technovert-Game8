@@ -1,0 +1,40 @@
+.container1{
+    justify-content: center;
+    display:flex;
+    background-color:rgba(5,21,47,255);
+}
+.star{
+    color:white;
+    height:2rem;
+    width:2rem;
+    transform: rotate(deg);
+}
+.con1-body{
+    margin:3rem 1.5rem 3rem 8rem;
+
+}
+.text-green{
+    color: green;
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+
+}
+.con1-text{
+    color: white;
+    margin-bottom: 0.5rem;
+}
+li{
+    list-style: none;
+}
+.button{
+    background-color:  rgba(123,164,53,255);
+    height:2rem;
+    width:6rem;
+    border-radius: 0.5rem;
+    color: white;
+}
+.warzone{
+    height:15rem;
+    width:15rem;
+    margin-right:2rem;
+}

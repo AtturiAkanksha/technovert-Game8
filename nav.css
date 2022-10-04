@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background-color: rgba(0,15,46,255);
+}
+nav{
+    background-color: rgba(5,21,47,255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    padding: 0.2rem 1.5rem 0.7rem 2rem;
+    font-size: 1rem;
+}
+.nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 4rem;
+
+}
+.nav li{
+    padding:0 0.8rem;  
+    font-size:1rem;
+
+}
+.button-nav{
+    background-color:  rgba(123,164,53,255);
+    height:1.8rem;
+    width:3.7rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-size:0.6rem;
+}
+.join-now{
+    background-color:  rgba(123,164,53,255);
+    height:1.8rem;
+    width:4.5rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-size:0.6rem;
+    margin:0.4rem 0rem 0 1.5rem;
+}
+svg{
+    margin: 0rem 0rem 0.4rem 6rem;
+}

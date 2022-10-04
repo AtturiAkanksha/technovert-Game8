@@ -1,0 +1,38 @@
+.container4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:10rem;
+}
+.con4-rec-box{
+    width: 50rem;
+    height: 6rem;
+    margin: 1rem;
+    border:0.1rem solid rgba(25,42,65,255);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.box-items{
+    margin:2rem 2rem;
+}
+.num-button{
+    background-color: rgba(123,164,53,255);
+    height:1.7rem;
+    width:7rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-size:0.6rem;
+}
+.box-items h1{
+    color:white;
+    margin-left: 1.5rem;
+}
+.space{
+    background-color: rgba(7,21,48,255);
+    box-sizing: border-box;
+    width:200rem;
+    height:5rem;      
+}

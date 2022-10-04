@@ -1,172 +1,272 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>technovert task1</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="nav.css" />
+    <link rel="stylesheet" href="con2.css" />
+    <link rel="stylesheet" href="con1.css" />
+    <link rel="stylesheet" href="con3.css" />
+    <link rel="stylesheet" href="con4.css" />
+    <link rel="stylesheet" href="con5.css" />
+    <link rel="stylesheet" href="con6.css" />
 </head>
 
 <body>
     <nav class="nav">
-        <h1>Game8</h1>
-        <ul class="centre">
-            <li class="home"><button type="button" class="button">home</button></li>
-            <li class="shop">shop</li>
-            <li class="pages"><button type="button" class="button"><select name="pages" id="selectpage"
-                        style="border: none;">
-                        <option value="">PAGES</option>
-                        <option value="warzone"><a href="#">game1</a></option>
-                        <option value="upcomingmatches"><a href="#">game2</a></option>
-                        <option value="overview"><a href="#">game3</a></option>
-                    </select></button></li>
-            <li class="blog">BLOG</li>
-            <li class="contact"><button type="button" class="btn btn-success">contact</button></li>
+        <ul>
+            <li><h3>GAME8</h3></li>
         </ul>
-        <ul class="right">
-            <li><svg xmlns="http://www.w3.org/2000/svg" width="22" height="37" fill="white" class="bi bi-cart2"
+        <ul>
+            <button type="button" class="button-nav">HOME</button>
+            <li>shop</li>
+            <li class="pages"><select name="pages" id="selectpage"
+                    style="border: none; background-color:rgba(5,21,47,255) ; color:white">
+                    <option value="">PAGES</option>
+                    <option value="warzone"><a href="#">game1</a></option>
+                    <option value="upcomingmatches"><a href="#">game2</a></option>
+                    <option value="overview"><a href="#">game3</a></option>
+                </select></li>
+            <li>blog</li>
+            <button type="button" class="button-nav">CONTACT</button>
+        </ul>
+        <ul>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="37" fill="white" class="bi bi-cart2"
                     viewBox="0 0 16 16" style="cursor: pointer;">
                     <path
                         d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
                 </svg>
-            </li>
-            <li class="joinnow"><button type="button" class="button">join now </button></li>
+
+            <button type="button" class="join-now">JOIN NOW <span aria-hidden="true" style="font-size:0.8rem;">&raquo;</span></button>
         </ul>
     </nav>
-
-    <div class="section-1">
-        <div class="card-body">
-            <p class="card-text">ANY WHERE
-                <span>&#x2605;</span>
+    <div class="container1">
+        <div class="con1-body">
+            <p class="text-green">ANY WHERE
+                <span class="star">&#x2605;</span>
                 ANY TIME
             </p>
-            <h1 class="card-title">
+            <h1 class="con1-text">
                 <strong>GAMES WITH<br> LIVESTREAMING.</strong>
             </h1>
-            <p class="card-text-para">
-                There are many variations of passages of Lorem Ipsum available
-                have suffered alteration in some injected.
-            </p>
-            <li class="playnow"><button type="button" class="button"> Play Now </button>
+            <p class="con1-text">There are many variations of passages of Lorem Ipsum available have suffered alteration
+                in some injected.</p>
+            <button type="button" class="button"> Play Now <span aria-hidden="true">&raquo;</span></button>
         </div>
-        <img src="warezone2.jpg" class="img-field rounded-start" width="500" height="300px">
+        <div>
+            <img src="images/warezone2.jpg" class="warzone">
+        </div>
     </div>
 
-    <div class="section-2">
-        <img src="streaming.png">
-        <div class="card-body2">
-            <p class="card-text2"><strong>--LIVE STREAMING</strong></p>
-            <h1 class="card-title2"> WATCH UNLIMITED<br> LIVE
-                STREAMING.
-            </h1>
-            <p class="card-text-para2"> Gamic is the best way to explore the world of<br> gaming.With
-                a new fully interactive website.</p>
+    <div class="container2">
+        <div>
+            <img src="images/streaming.png" class="streaming">
+        </div>
+        <div class="con2-body">
+            <p class="text-green">
+                <strong>--LIVE STREAMING</strong>
+            </p>
+            <h2 class="con2-text">
+                WATCH UNLIMITED <br>LIVE STREAMING.
+            </h2>
+            <p class="con2-text">
+                Gamic is the best way to explore the world of gaming.With a new fully interactive website.
+            </p>
             <button type="button" class="button">Play Now
                 <span aria-hidden="true">&raquo;</span></button>
         </div>
     </div>
-
-
-
-
-    <div class="upcmg">
-        <strong>
+    <div class="container3">
+        <div class="row1">
             <h1>UPCOMING MATCH</h1>
-        </strong>
-        <p class="a">The teams soccer int he next hour.You've been waiting for the<br> best.You've got the match of your
-            life.</p>
+        </div>
+        <div class="row1">
+            <p>The teams soccer int he next hour.You've been waiting for the
+                best.You've got the match of your life.</p>
+        </div>
+        <div class="row1">
+            <div class="box">
+                <div class="row-inside">
+                    <div class="images">
+                        <img src="images/duck hunter.png">
+                    </div> <!-- images in boxes -->
+                    <div class="images">
+                        <h1><strong>Vs</strong></h1>
+                    </div>
+                    <div class="images">
+                        <img src="images/playerpro.png">
+                    </div>
+                </div>
+                <div class="box-body">
+                    <h5 class="date">Sunday,June 26,2022</h5>
+                    <h2 class="game-name">CAPPLETON GAME 2022</h2>
+                    <p class="teams-reg">02 teams registered</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="row-inside">
+                    <div class="images">
+                        <img src="images/ninja.png">
+                    </div>
+                    <div class="images">
+                        <h1><strong>Vs</strong></h1>
+                    </div>
+                    <div class="images">
+                        <img src="images/hacker.png">
+                    </div>
+                </div>
+                <div class="box-body">
+                    <h5 class="date">Sunday,June 26,2022</h5>
+                    <h2 class="game-name">WINOCREW GAME 2022</h2>
+                    <p class="teams-reg">03 teams registered</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="row-inside">
+                    <div class="images">
+                        <img src="images/gmg.png">
+                    </div>
+                    <div class="images">
+                        <h1><strong>Vs</strong></h1>
+                    </div>
+                    <div class="images">
+                        <img src="images/gmg team.png">
+                    </div>
+                </div>
+                <div class="box-body">
+                    <h5 class="date">Sunday,June 26,2022</h5>
+                    <h2 class="game-name">MISTICMERRY GAME 2022</h2>
+                    <p class="teams-reg">02 teams registered</p>
+                </div>
+            </div>
+        </div>
+        <div class="row2">
+            <div class="box">
+                <div class="row-inside">
+                    <div class="images">
+                        <img src="images/shark.png">
+                    </div>
+                    <div class="images">
+                        <h1><strong>Vs</strong></h1>
+                    </div>
+                    <div class="images">
+                        <img src="images/wolf.png">
+                    </div>
+                </div>
+                <div class="box-body">
+                    <h5 class="date">Sunday,June 26,2022</h5>
+                    <h2 class="game-name">BRIGHTNEST GAME 2022</h2>
+                    <p class="teams-reg">04 teams registered</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="row-inside">
+                    <div class="images">
+                        <img src="images/xyz.png">
+                    </div>
+                    <div class="images">
+                        <h1><strong>Vs</strong></h1>
+                    </div>
+                    <div class="images">
+                        <img src="images/ignite.png">
+                    </div>
+                </div>
+                <div class="box-body">
+                    <h5 class="date">Sunday,June 26,2022</h5>
+                    <h2 class="game-name">CLUESTATIS GAME 2022</h2>
+                    <p class="teams-reg">05 teams registered</p>
+                </div>
+            </div>
+        </div>
+        <div class="row1">
+            <button type="button" class="others-match">Other's match
+                <span aria-hidden="true">&raquo;</span></button>
+        </div>
     </div>
-
-    <div class="card">
-        <div class="card-item">
-            <div class="card31">
-                <img src="duck hunter.png" alt=".." class="card-img">
-                <h4 style="font-size:70px">Vs</h4>
-                <span><img src="playerpro.png"></span>
-                <div>
-                    <button type="button" class="button"><img src="play.png" alt="..." ;>
-                        <span>live stream</span>
-                    </button>
+    <div class="container4">
+        <div class="con4-rec-box">
+            <div class="box-items">
+                <h1>8697</h1>
+                <button type="button" class="num-button">TWITCH STREAMS</button>
+            </div>
+            <div class="box-items">
+                <h1>428</h1>
+                <button type="button" class="num-button">TOTAL GAMES</button>
+            </div>
+            <div class="box-items">
+                <h1>5480</h1>
+                <button type="button" class="num-button">YOUTUBE STREAMS</button>
+            </div>
+            <div class="box-items">
+                <h1>249</h1>
+                <button type="button" class="num-button">PRO TEAM</button>
+            </div>
+        </div>
+    </div>
+    <div class="space"></div>
+    <div class="container5">
+        <div class="con5-rec-box">
+            <div class="con5-rec-text">
+                <h1><strong> SUBSCRIBE NEWSLETTER</strong></h1>
+                <P>When unknown printer took type and scrambled it to make type specimen book centuries.
+                </P>
+            </div>
+            <div class="enter-mail">
+                <p>Enter your email</p>
+                <span><button type="button" class="subscribe">SUBSCRIBE<span
+                            aria-hidden="true" style="font-size:0.9rem; padding-left:0.2rem;">&raquo;</span></button></span>
+            </div>
+        </div>
+    </div>
+    <div class="container6">
+        <div class="details">
+            <h1>GAME8</h1>
+            <P>Game8 is the best ay to explore the world of gaming .With a new,fully interactive website.</P>
+        </div>
+        <div class="details">
+            <h1>CONTECT</h1>
+            <p class="heading">location:</p>
+            <p>136 harding ave Wheeling,West Verginia</p>
+            <p class="heading">Phone:</p>
+            <p>00 (62) 632 867 4497</p>
+        </div>
+        <div class="details">
+            <h1>HELP</h1>
+            <li>licences</li>
+            <li>stilegiude</li>
+            <li>changelog</li>
+            <li>motion design</li>
+            <li>illustration</li>
+        </div>
+        <div class="details">
+            <h1>TODAYS' WINNERS</h1>
+            <div class="winners">
+                <div class="winner">
+                    <img src="images/wplayerpro.png">
                 </div>
-                <div class="card-body31">
-                    <h5 class="date">Sunday,June 26,2022</h5>
-                    <h2 class="card-title31">CAPPLETON GAME 2022</h2>
-                    <p class="card-text31">02 teams registered</p>
+                <div class="winner">
+                    <img src="images/wduckhunter.png">
+                </div>
+                <div class="winner">
+                    <img src="images/wvioletscarf.png">
+                </div>
+            </div>
+            <div class="winners">
+                <div class="winner">
+                    <img src="images/wninja.png">
+                </div>
+                <div class="winner">
+                    <img src="images/whackeryellow.png">
+                </div>
+                <div class="winner">
+                    <img src="images/whacker.png">
                 </div>
             </div>
         </div>
-
-        <div class="card-item">
-            <div class="card31">
-                <img src="duck hunter.png" alt=".." class="card-img">
-                <span class="vs">Vs</span>
-                <img src="playerpro.png">
-                <div>
-                    <button type="button" class="button"><img src="play.png" alt="..." ;>
-                        <span>live stream</span>
-                    </button>
-                </div>
-                <div class="card-body31">
-                    <h5 class="date">Sunday,June 26,2022</h5>
-                    <h2 class="card-title31">CAPPLETON GAME 2022</h2>
-                    <p class="card-text31">02 teams registered</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-item">
-            <div class="card31">
-                <img src="duck hunter.png" alt=".." class="card-img">
-                <span class="vs">Vs</span>
-                <img src="playerpro.png">
-                <div>
-                    <button type="button" class="button"><img src="play.png" alt="..." ;>
-                        <span>live stream</span>
-                    </button>
-                </div>
-                <div class="card-body31">
-                    <h5 class="date">Sunday,June 26,2022</h5>
-                    <h2 class="card-title31">CAPPLETON GAME 2022</h2>
-                    <p class="card-text31">02 teams registered</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-item">
-            <div class="card31">
-                <img src="duck hunter.png" alt=".." class="card-img">
-                <span class="vs">Vs</span>
-                <img src="playerpro.png">
-                <div>
-                    <button type="button" class="button"><img src="play.png" alt="..." ;>
-                        <span>live stream</span>
-                    </button>
-                </div>
-                <div class="card-body31">
-                    <h5 class="date">Sunday,June 26,2022</h5>
-                    <h2 class="card-title31">CAPPLETON GAME 2022</h2>
-                    <p class="card-text31">02 teams registered</p>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <a class="nav-link" style="text-align:center ;"><button type="button" class="btn btn-success btn-lg">
-                Other's match <span aria-hidden="true">&raquo;</span>
-            </button></a>
+    </div>
 </body>
 
 </html>

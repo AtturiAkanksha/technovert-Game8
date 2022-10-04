@@ -1,0 +1,38 @@
+.container6{
+    display: flex;
+    justify-content: center;
+    color:white;
+}
+.details {
+    margin:2rem; 
+    width:9rem;
+}
+.details h1{
+    font-size: 0.8rem; 
+    margin-bottom: 1rem;
+}
+.details p{
+    font-size: 0.7rem; 
+}
+.heading{
+    margin: 1rem 0 0.5rem 0;
+    color:rgba(123,164,53,255);
+}
+li{
+    list-style: none;
+    margin:0.4rem;
+    font-size: 0.7rem;
+}
+.winners{
+    display: flex;
+    justify-content: center;
+}
+.winner{
+    width: 2rem;
+    height: 2rem;
+    margin: 0.5rem;
+    border:0.1rem solid rgba(0,15,46,255);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+}
