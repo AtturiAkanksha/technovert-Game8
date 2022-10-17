@@ -54,8 +54,8 @@ header{
 
 .button-nav {
   background-color: rgba(123, 164, 53, 255);
-  height: 2.5vw;
-  width: 6vw;
+  height: 2rem;
+  width: 4rem;
   border-radius: 0.5rem;
   color: white;
   font-size: 0.8rem;
@@ -112,9 +112,9 @@ li {
   background-color: rgba(123, 164, 53, 255);
   border-radius: 0.5rem;
   color: white;
-  width:7vw;
-  height: 2.5vw;
-  font-size: 0.8vw;
+  width:5rem;
+  height: 2rem;
+  font-size: 0.7rem;
 }
 
 .flex-2-img {
