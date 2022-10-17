@@ -30,7 +30,7 @@ header{
   align-items: center;
   justify-content: center;
   margin: 0 3vw;
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 
 .nav li {
@@ -49,17 +49,18 @@ header{
   background-color: rgba(5, 21, 47, 255);
   color: white;
   border: none;
-  font-size: 1.7vw;
+  font-size: 1.3vw;
 }
 
 .button-nav {
   background-color: rgba(123, 164, 53, 255);
-  height: 3vw;
-  width: 8vw;
+  height: 2.5vw;
+  width: 6vw;
   border-radius: 0.5rem;
   color: white;
-  font-size: 1.5vw;
+  font-size: 1vw;
 }
+
 
 /* div-1 */
 
@@ -70,13 +71,13 @@ header{
 }
 .primary-section {
   display: flex;
-  padding:2rem 1rem ;
+  padding:2rem 10rem ;
   background-color: rgba(5, 21, 47, 255);
   justify-content: space-around;
 }
 .secondary-section{
   display: flex;
-  padding:2rem 1rem ;
+  padding:2rem 10rem ;
   background-color: rgba(0,15,46,255);
   justify-content: space-around;
 
@@ -109,11 +110,11 @@ li {
 
 .btn-primary-large {
   background-color: rgba(123, 164, 53, 255);
-  height: 3vw;
-  width: 12vw;
   border-radius: 0.5rem;
   color: white;
-  font-size: 1.3vw;
+  width:7vw;
+  height: 2.5vw;
+  font-size: 0.8vw;
 }
 
 .flex-2-img {
@@ -151,12 +152,11 @@ li {
 }
 .grid-content{
   justify-content: center;
-  max-width: 1240px;
-  width:90%;
+
 }
 
 .grid-text {
-  justify-content: center;
+  justify-self: center;
 }
 
 .row-2 {
@@ -225,7 +225,7 @@ li {
 }
 .d-flex-mb-1 {
   height: 6rem;
-  width:80vw;
+  width:65vw;
   border: 0.1rem solid rgba(25, 42, 65, 255);
   border-radius: 1rem;
   display: flex;
@@ -242,6 +242,11 @@ li {
 .box-items h1 {
   color: white;
 }
+.box-items .btn-primary-large{
+  width: 7vw;
+  font-size: 0.8vw;
+  height: 5vh;
+}
 
 /*  footer  */
 .footer-outer{
@@ -251,23 +256,27 @@ li {
 .footer {
   background-color: rgba(0,15,46,255);
   color: white;
-  padding: 2rem 0 0 6rem;
+  padding: 6vh 10vw 0 17vw;
 }
 .footer .d-flex-mb-1{
   background-color: rgba(123, 164, 53, 255);
   align-items: center;
   justify-content: space-around;
-  width:85%;
+  width:65vw;
+}
+.footer .d-flex-mb-1 h1,p{
+  font-size: small;
 }
 #box-right {
-  width: 20rem;
+  width: 17rem;
   height: 2.7rem;
   border: 0.1rem solid rgba(123, 164, 53, 255);
   border-radius: 0.5rem;
   display: flex;
-  justify-content:space-around;
+  justify-content:space-between;
   align-items: center;
   background-color: white;
+  padding: 0 3vw;
 }
 
 #box-right p {
@@ -313,25 +322,25 @@ li {
 @media screen and (max-width:600px){
   .primary-section{
     flex-direction: column;
-    margin-left:10vw;
+    width: fit-content;
     
   }
   .secondary-section{
     flex-direction:column-reverse;
-    padding-left:10vw;
+     width: fit-content;
     
     
   }
 .primary-section .btn-primary-large{
     height: 2rem;
     font-size: large;
-    width: 10rem;
+    width: 8rem;
     margin:  1rem 5rem 3rem 0.5rem;
   }
   .secondary-section .btn-primary-large{
     height: 2rem;
     font-size: large;
-    width: 10rem;
+    width: 8rem;
     margin:  1rem 5rem 3rem 0.5rem;
   }
   .row-1{
@@ -372,6 +381,9 @@ li {
     width: 28vw;
     height: 6vh;
   }
+  .d-flex-mb-1{
+    width: fit-content;
+  }
   .box-items .btn-primary-large{
     height: 1.6rem;
   }
@@ -392,5 +404,8 @@ li {
   }
   .footer-contents{
     flex-direction: column;
+  
+
   }
+
 }
