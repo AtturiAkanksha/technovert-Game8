@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    color: black;
+    margin-top: 2rem;
+    justify-content: space-between;
+    margin-bottom: 0.7rem;
+    padding: 0 1vw;
+}
+
+.header-left {
+    display: flex;
+    align-items: flex-end;
+}
+
+.header-left img {
+    height: 3rem;
+}
+
+.header-left p {
+    margin-left: 1vw;
+}
+
+.title {
+    font-size: xx-large;
+    color: #00b1fc;
+}
+
+.header-right {
+    display: flex;
+    align-items: flex-end;
+    font-size: x-large;
+}
+
+.greeting {
+    color: #00b1fc;
+}
+
+.header-right img {
+    height: 3rem;
+}
+
+hr {
+    width: 100vw;
+}
+
+main {
+    display: flex;
+    margin: 2rem 2rem;
+    justify-content: space-between;
+}
+
+.d-left {
+    list-style: none;
+}
+
+.d-left a {
+    text-decoration: none;
+    color: black;
+    font-size: small;
+}
+
+.list {
+    margin-bottom: 2rem;
+}
+
+.list li a {
+    color: grey;
+}
+
+#viewmore{
+    color:#00b1fc;
+}
+#hidden{
+    list-style: none;
+    display:none;
+    text-transform: capitalize;
+}
+.main-right{
+    margin-left: 4rem;
+}
+.mybtns{
+    margin:0px 5px 15px 2px;
+    width:1.5rem;
+    height:1.5rem;
+    display: inline;
+    background-color: #00b1fc;
+    border: none;
+    color: white;
+}
+.d-flex {
+    width:fit-content;
+    margin-bottom: 1rem;
+    width:75vw;
+    display: flex;
+    
+}
+.div-ml-7{
+    position:relative;
+    left:7vw;
+}
+
+#btn-right {
+    background-color: #00b1fc;
+    color: white;
+    border: none;
+    height: 1.5rem;
+    width: 6rem;
+    float: right;
+    text-decoration:none;
+    font-size: 0.9rem;
+    /* padding: 7px 5px 0px 5px; */
+   
+}
+.btn-primary {
+    background-color: #00b1fc;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    width: 7rem;
+    text-decoration:none;
+    font-size: 0.9rem;
+    text-align: center;  
+    align-items: center;
+}
+.popup{
+    background-color: rgba(0,0,0,0.6);
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#popup-content, #editDetailsForm{
+    height:470px;
+    display:grid;
+    grid-row-gap: 4px;
+    width:500px;
+    background:rgb(113, 184, 206);
+    padding:20px;
+    border-radius:5px;
+    position:relative;
+}
+.close{
+    position: relative;
+    width:"16" ;
+    height:"16" ;
+    border-radius: 50%;
+
+}
+
+/* .popup-content .btn-right{
+    position: relative;
+} */
+#selectoption {
+    color: grey;
+    width: 10rem;
+    height: 1.7rem;
+}
+
+.text-small {
+    font-size: 0.7rem;
+}
+
+input {
+    height: 1.5rem;
+    color: grey;
+}
+
+.btn-success {
+    margin: 0 4vw;
+    background-color: #69ba00;
+    color: white;
+    border: none;
+    height: 1.5rem;
+
+    width: 3rem;
+}
+
+.grid {
+    border: 2px solid grey;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    height: 40rem;
+    display: grid;
+    grid-template-columns:  17vw 17vw 17vw 17vw;
+    grid-template-rows: 6rem 6rem 6rem 6rem;
+    grid-gap: 20px 20px;
+}
+
+.card {
+    background-color: #e9e8e8;
+    display: flex;
+    align-items: center;
+}
+.card-img {
+    height:4rem;
+    width:4rem;
+    margin:1rem;
+   }
+
+.card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.card-content{
+    align-items: center;
+}
+
+.card-title{
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.card-text {
+    color: #979696;
+    font-size: 10px;
+    text-transform: capitalize;
+}
+svg{
+    color: #979696;
+    height:15px;
+    
+}
+.close{
+    position: absolute;
+    top: -13px;
+    right: -13px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 900px) {
+    .header-left img {
+        height: 2rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .header-left {
+        font-size: 0.7rem;
+    }
+
+    .header-right {
+        font-size: 0.9rem;
+    }
+
+
+    .d-flex {
+        width: fit-content;
+    }
+    .btn-large-ms-4{
+        margin:1rem 0;
+        position: relative;
+    }
+    .btn-right{
+        margin: 1rem;
+        
+    }
+    .grid {
+        flex-direction: column;
+    }
+}

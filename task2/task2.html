@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="task2.css" />
+
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <img src="https://saketa.com/wp-content/uploads/2022/02/saketa-logo.svg">
+            <div>
+                <p class="title">Employee Directory</p>
+                <p>The Ultimate People Directory Experience</p>
+            </div>
+        </div>
+        <div class="header-right">
+            <div>
+                <p><span class="greeting">Welcome</span>,Andrew Philips </p>
+            </div>
+            <img src="images/th (2).jpg" alt="">
+        </div>
+    </header>
+    <hr>
+    <main>
+        <div class="d-left">
+            <div class="list list1" id="Departments">
+                <h4>Departments</h4>
+                <li><a href="#">MD</a></li>
+                <li><a href="#">IT department</a></li>
+                <li><a href="#">HR department</a></li>
+
+                <li id="sales"><a href="#">Sales department</a></li>
+            </div>
+            <div class="list list2" id="offices">
+                <h4>Offices</h4>
+                <li><a href="#">Seattle</a></li>
+                <li><a href="#">India</a></li>
+            </div>
+            <div class="list list3" id="jobtitles">
+                <h4>Job Titles</h4>
+                <li><a href="#">software engineer</a></li>
+                <li><a href="">UI designer</a></li>
+                <li><a href="">product manager</a></li>
+                <li><a href="">talent manager</a></li>
+                <li><a href="">network engineer</a></li>
+                <li><a href="">lead engineer</a></li>
+                <li><a id="viewmore" onclick="append()" href="#">view more</a></li>
+                <ul id="hidden">
+                    <li><a href="#">SharePoint practise Head</a></li>
+                    <li><a href="#">dotNet Development Lead</a></li>
+                    <li><a href="#">Recruiting Expert</a></li>
+                    <li><a href="#">BI Developer</a></li>
+                    <li><a href="#"> OperationsManager</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="main-right">
+            <div class="flex">
+            </div>
+            <div class="d-flex">
+                <div>
+                    <label>Search</label>
+                    <input type="text" id="searchbar" placeholder="enter any keyword" onkeyup="filterByKeyword()">
+                </div>
+                <div>
+                    <button class="btn-success">clear</button>
+                </div>
+                <div class="">
+                    <label>Filter by</label>
+                    <select id="selectoption">
+                        <option id=""><a href="#">preferred name</option>
+                        <option><a href="#">firstname</a></option>
+                        <option><a href="#">lastname</a></option>
+                        <option><a href="#">jobtitle</a></option>
+                        <option><a href="#">department</a></option>
+                        <option><a href="#">office</a></option>
+                        <option><a href="#">phonenumber</a></option>
+                        <option><a href="#">email</a></option>
+                        <option><a href="#">skypeid</a></option>
+
+                    </select>
+                </div>
+                <div class="div-ml-7">
+                    <button href="#" class="btn-primary" id="btn-right">Add Employee</button>
+                </div>
+            </div>
+            <div class="text-small">
+                <p class="text-small"><b>Note:</b>please use the advanced filter options to refine your results.</p>
+            </div>
+            <div class="grid">
+                <!--<div class="card" ></div>
+                      <div class="card-img"> 
+                        <img id="cardimg" src="images/Anthony Morris.jpg">
+                    </div>
+                    <div class="card-content">
+                        <p id="preferredname"></p>
+                        <p id="jobtitle"></p>
+                        <p id="department"></p>
+                        <div class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chat-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                            </svg>
+                        </div>
+                    </div>-->
+            </div>
+        </div>
+        </div>
+
+    </main>
+    <div class="popup">
+        <form id="popup-content">
+            <img src="images/x-circle.svg" class="close">
+            firstname:<input type="text" placeholder="firstname" name="firstname" id="firstnameInput" required />
+            lastname:<input type="text" placeholder="lastname" name="lastname" id="lastnameInput" required />
+            <!-- preferredname:<input type="text" placeholder="preferredname" name="prefferedname" id="preferrednameInput" required/> -->
+            email:<input type="email" placeholder="email" name="email" id="emailInput" required />
+            jobtitle:<input type="text" placeholder="Job Title" name="jobtitle" id="jobtitleInput" required />
+            office:<input type="text" placeholder="Office" name="office" id="officeInput" required />
+            department:<input type="text" placeholder="Department" name="department" id="departmentInput" required />
+            phonenumber:<input type="number" placeholder="Phone Number" name="phonenumber" id="phonenumberInput" required/>
+            skypeid:<input type="text" placeholder="Skype ID" name="skypeid" id="skypeidInput" required />
+            <input type="submit" name="submit" onclick="submitForm()" value="submit" class="btn-primary" />
+        </form>
+    </div>
+    <div class="popup popupForEdit" >
+        <form id="editDetailsForm">
+            
+        </form>
+    </div>
+    <script src="task2.js"></script>
+</body>
+
+</html>
