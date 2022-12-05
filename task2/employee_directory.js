@@ -172,7 +172,7 @@ totalemployees.push(emp8);
 localStorage.setItem("totalemployees", JSON.stringify(totalemployees));
 create_cards(totalemployees);
 
-let newemployee = employee(
+let newEmployee = employee(
   document.getElementById("firstnameInput").value,
   document.getElementById("lastnameInput").value,
   document.getElementById("emailInput").value,
@@ -186,7 +186,7 @@ let newemployee = employee(
 
 
 function submitForm() {
-  var newemployee = new employee("", document.getElementById("firstnameInput").value,
+  var newEmployee = new employee("", document.getElementById("firstnameInput").value,
     document.getElementById("lastnameInput").value,
     document.getElementById("emailInput").value,
     document.getElementById("jobtitleInput").value,
@@ -195,7 +195,7 @@ function submitForm() {
     document.getElementById("phonenumberInput").value,
     document.getElementById("skypeidInput").value
   );
-  totalemployees.push(newemployee);
+  totalemployees.push(newEmployee);
 
   localStorage.setItem("totalemployees", JSON.stringify(totalemployees));
   json = localStorage.getItem("totalemployees");
@@ -256,7 +256,6 @@ function form(k){
   <input  name="submit" type="button" id="edit" onclick="editForm(${k})" value="save" class="btn-primary" /></input>`;
 
 };
-
 
 
 function editForm(k) {
