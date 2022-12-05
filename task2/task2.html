@@ -139,7 +139,7 @@
     </main>
     <div class="popup">
         <form id="popup-content">
-            <img src="images/x-circle.svg" class="close">
+            <img src="images/x-circle.svg" class="close" /> 
             firstname:<input type="text" placeholder="firstname" name="firstname" id="firstnameInput" required />
             lastname:<input type="text" placeholder="lastname" name="lastname" id="lastnameInput" required />
             <!-- preferredname:<input type="text" placeholder="preferredname" name="prefferedname" id="preferrednameInput" required/> -->
@@ -152,11 +152,12 @@
             <input type="submit" name="submit" onclick="submitForm()" value="submit" class="btn-primary" />
         </form>
     </div>
-    <div class="popup popupForEdit" >
-        <form id="editDetailsForm">
+    <div class="popup" id="popupForEdit" >
+        <form  id="editDetailsForm">
             
         </form>
     </div>
+
     <script src="task2.js"></script>
 </body>
 

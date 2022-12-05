@@ -68,9 +68,9 @@ document.getElementById("btn-right").addEventListener("click", function () {
 });
 
 //close btn
-document.querySelector(".close").addEventListener("click", function () {
+document.querySelector(".close").addEventListener('click',function() {
+  document.querySelector("#popupForEdit").style.display = "none";
   document.querySelector(".popup").style.display = "none";
-  document.querySelector("popupForEdit").style.display = "none";
 });
 
 
@@ -96,7 +96,7 @@ function create_cards(totalemployees) {
   document.querySelector(".grid").innerHTML = ""
   for (var i = 0; i < totalemployees.length; i++) {
     var fetch = document.querySelector(".grid").innerHTML;
-    dynamic.innerHTML =
+    dynamic.innerHTML +=
       `<div id="cards${i}"  onclick="form(${i})" class="card" >
     <div class="card-img">
         <img id="cardimg" src="images/${totalemployees[i].preferredname}.jpg">
@@ -133,7 +133,7 @@ function create_cards(totalemployees) {
             </svg>
         </div>
     </div>
-</div>`+ fetch;
+</div>`;
 
   };
 };
@@ -144,21 +144,21 @@ function create_cards(totalemployees) {
 
 
 
-var emp1 = new employee("1", "anthony", "morris", "anthonymorris.gmail.com", "sharepoint practice head", "IT department", "India", 8745630218);
+var emp1 = new employee("1", "anthony", "morris", "anthonymorris@gmail.com", "sharepoint practice head", "IT department", "India", 8745630218,"live:anthonymorris");
 
-var emp2 = new employee("2", "helen", "zimmerman", "helenzimmerman.gmail.com", "operations manager", "IT department", "India", 985476893);
+var emp2 = new employee("2", "helen", "zimmerman", "helenzimmerman@gmail.com", "operations manager", "IT department", "India", 985476893,"live:helenzemmerman");
 
-var emp3 = new employee("3", "jonathon", "smith", "jonathonsmith.gmail.com", "product manager", "IT department", "India", 875634236);
+var emp3 = new employee("3", "jonathon", "smith", "jonathonsmith@gmail.com", "product manager", "IT department", "India", 875634236,"live:jonathn");
 
-var emp4 = new employee("4", "tami", "hopkins", "tamihopkins.gmail.com", "lead engineer", "IT department", "India", 9845096055);
+var emp4 = new employee("4", "tami", "hopkins", "tamihopkins@gmail.com", "lead engineer", "IT department", "India", 9845096055,"live:tami876");
 
-var emp5 = new employee("5", "franklin", "humark", "franklinhumark@gmail.com", "network engineer", "IT department", "Seattle", 8753432673);
+var emp5 = new employee("5", "franklin", "humark", "franklinhumark@gmail.com", "network engineer", "IT department", "Seattle", 8753432673,"live:franklin234");
 
-var emp6 = new employee("6", "angela", "bailey", "angelabailey@gmail.com", "talent manager", "HR department", "Seattle", 9855545544);
+var emp6 = new employee("6", "angela", "bailey", "angelabailey@gmail.com", "talent manager", "HR department", "Seattle", 9855545544,"live:angela345");
 
-var emp7 = new employee("7", "robert", "mitchell", "anthonymorris.gmail.com", "software engineer", "IT department", "Seattle", 6755554344);
+var emp7 = new employee("7", "robert", "mitchell", "anthonymorris@gmail.com", "software engineer", "IT department", "Seattle", 6755554344,"live:robert456");
 
-var emp8 = new employee("8", "olivia", "watson", "oliviawatson@gmail.com", "UI designer", "UX department", "Seattle", 8977665544);
+var emp8 = new employee("8", "olivia", "watson", "oliviawatson@gmail.com", "UI designer", "UX department", "Seattle", 8977665544,"live:olivia234");
 
 totalemployees.push(emp1);
 totalemployees.push(emp2);
@@ -179,7 +179,7 @@ let newemployee = employee(
   document.getElementById("jobtitleInput").value,
   document.getElementById("officeInput").value,
   document.getElementById("departmentInput").value,
-  // document.getElementById("phonenumberInput").value,
+  document.getElementById("phonenumberInput").value,
   document.getElementById("skypeidInput").value,
 );
 
@@ -192,7 +192,7 @@ function submitForm() {
     document.getElementById("jobtitleInput").value,
     document.getElementById("officeInput").value,
     document.getElementById("departmentInput").value,
-    // document.getElementById("phonenumberInput").value,
+    document.getElementById("phonenumberInput").value,
     document.getElementById("skypeidInput").value
   );
   totalemployees.push(newemployee);
@@ -242,56 +242,56 @@ function filterByKeyword() {
 
 
 function form(k){
-  document.getElementById("editDetailsForm").innerHTML += `<img src="images/x-circle.svg" class="close">
-  firstname:<input type="text" placeholder="firstname"  id="firstname" contenteditable="true" required />
-  lastname:<input type="text" placeholder="lastname"  id="lastname" contenteditable="true" required />
-  <!--<input type="text" placeholder="preferredname" name="prefferedname" id="preferrednameInput" required/> -->
-  email:<input type="email" placeholder="email" id="email" contenteditable="true" required />
-  jobtitle:<input type="text" placeholder="Job Title" id="jobtitle" contenteditable="true" required />
-  office:<input type="text" placeholder="Office" id="office" contenteditable="true" required />
-  department:<input type="text" placeholder="Department"  id="department" contenteditable="true" required />
-  <!--<input type="number" placeholder="Phone Number" name="phonenumber" id="phonenumber" required/> -->
-  skypeid:<input type="text" placeholder="Skype ID"  id="skypeid" contenteditable="true"   required />
-  <input type="submit" name="submit" onclick="edit(${k})" value="Edit" class="btn-primary" />`;
-  displayEditForm(k);
-}
+  document.querySelector("#popupForEdit").style.display = "flex";
+  document.getElementById("editDetailsForm").innerHTML = `
+  firstname:<input type="text" placeholder="firstname" value=${totalemployees[k].firstname}  id="firstname" contenteditable="true" required />
+  lastname:<input type="text" placeholder="lastname"  value=${totalemployees[k].lastname}  id="lastname" contenteditable="true" required />
+  <!--preferredname:<input type="text" value=${totalemployees[k].preferredname} placeholder="preferredname"  name="prefferedname" id="preferredname" required/> -->
+  email:<input type="email"  value=${totalemployees[k].email} placeholder="email" id="email" contenteditable="true" required />
+  jobtitle:<input type="text"  value=${totalemployees[k].jobtitle} placeholder="Job Title" id="jobtitle" contenteditable="true" required />
+  office:<input type="text"  value=${totalemployees[k].office} placeholder="Office" id="office" contenteditable="true" required />
+  department:<input type="text"  value=${totalemployees[k].department} placeholder="Department"  id="department" contenteditable="true" required />
+  phonenumber:<input type="number" value=${totalemployees[k].phonenumber}  placeholder="Phone Number" name="phonenumber" id="phonenumber" required/> 
+  skypeid:<input type="text" value=${totalemployees[k].skypeid} placeholder="Skype ID"  id="skypeid" contenteditable="true"   required />
+  <input  name="submit" type="button" id="edit" onclick="editForm(${k})" value="save" class="btn-primary" /></input>`;
+
+};
 
 
-function displayEditForm(k) {
-  console.log("displayEditForm()")
-  document.querySelector(".popupForEdit").style.display = "flex";
-  document.getElementById("firstname").value = totalemployees[k].firstname;
-  document.getElementById("lastname").value = totalemployees[k].lastname;
-  document.getElementById("email").value = totalemployees[k].email;
-  document.getElementById("jobtitle").value = totalemployees[k].jobtitle;
-  document.getElementById("office").value = totalemployees[k].office;
-  document.getElementById("department").value = totalemployees[k].department;
-  document.getElementById("skypeid").value = totalemployees[k].skypeid;
+
+function editForm(k) {
+
+
+  let firstname=document.getElementById("firstname").value;
+  let lastname=document.getElementById("lastname").value;
+  // let preferredname=document.getElementById("preferredname").value;
+  let email=document.getElementById("email").value;
+  let jobtitle=document.getElementById("jobtitle").value;
+  let office =document.getElementById("office").value;
+  let department=document.getElementById("department").value;
+  let phonenumber = document.getElementById("phonenumber").value;
+  let skypeid=document.getElementById("skypeid").value;
+
+  console.log(firstname);
+
+
+  totalemployees[k].firstname = firstname;
+  totalemployees[k].lastname = lastname;
+  // totalemployees[k].preferredname = preferredname;
+  totalemployees[k].email = email;
+  totalemployees[k].jobtitle = jobtitle;
+  totalemployees[k].office = office;
+  totalemployees[k].department = department;
+  totalemployees[k].phonenumber = phonenumber;
+  totalemployees[k].skypeid = skypeid;
   
 
+  create_cards(totalemployees);
 
+
+  document.querySelector("#popupForEdit").style.display = "none";
   
-  let newlname = document.getElementById("lastname").value;
-  let newemail = document.getElementById("email").value;
-  let newjobtitle = document.getElementById("jobtitle").value;
-  let newoffice = document.getElementById("office").value;
-  let newskypeid = document.getElementById("skypeid").value;
-  let newdepartment = document.getElementById("department").value;
-
-}
-
-
-function edit(k) {
-  for (var k = 0; k < totalemployees.length; k++) {
-
-    // localStorage.setItem("totalemployees", totalemployees);
-  }
-  var a=document.getElementById("firstname").value;
-  console.log(a);
-  totalemployees[k].firstname = a;
-  console.log(totalemployees[k].firstname);
-}
-
+};
 
 
 
