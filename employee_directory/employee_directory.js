@@ -41,9 +41,9 @@ let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let letterArray = letters.split("");
 for (var i = 0; i < 26; i++) {
   var letter = letterArray.shift();
-  btns += '<button class="mybtns" onclick="alphabetsearch(\'' + letter + '\');">' + letter + '</button>';
+  btns += '<button class="mybtns" onclick="alphabetSearch(\'' + letter + '\');">' + letter + '</button>';
 }
-function alphabetsearch(letter) {
+function alphabetSearch(letter) {
   let result = totalemployees.filter(employee => employee.firstname.toUpperCase().charAt(0) == letter);
   create_cards(result);
 };
