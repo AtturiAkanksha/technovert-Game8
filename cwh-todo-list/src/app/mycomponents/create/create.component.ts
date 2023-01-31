@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent {
-
+  imagepath:any;
+  toClose=true;
+  toggleDiv(){
+    this.toClose=!this.toClose;
+  }
+  constructor(){
+    this.imagepath='/assets/images/x-circle.svg/'
+  }
 }

@@ -71,7 +71,33 @@
                     <input type="text" id="searchbar" placeholder="enter any keyword" onkeyup="filterByKeyword()">
                 </div>
                 <div>
-                    <button class="btn-success">clear</button>
+                    <!-- <button class="btn-success">clear</button> -->
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                        Launch demo modal
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="">
                     <label>Filter by</label>
@@ -139,7 +165,7 @@
     </main>
     <div class="popup">
         <form id="popup-content">
-            <img src="images/x-circle.svg" class="close" /> 
+            <img src="images/x-circle.svg" class="close" />
             firstname:<input type="text" placeholder="firstname" name="firstname" id="firstnameInput" required />
             lastname:<input type="text" placeholder="lastname" name="lastname" id="lastnameInput" required />
             <!-- preferredname:<input type="text" placeholder="preferredname" name="prefferedname" id="preferrednameInput" required/> -->
@@ -147,14 +173,15 @@
             jobtitle:<input type="text" placeholder="Job Title" name="jobtitle" id="jobtitleInput" required />
             office:<input type="text" placeholder="Office" name="office" id="officeInput" required />
             department:<input type="text" placeholder="Department" name="department" id="departmentInput" required />
-            phonenumber:<input type="number" placeholder="Phone Number" name="phonenumber" id="phonenumberInput" required/>
+            phonenumber:<input type="number" placeholder="Phone Number" name="phonenumber" id="phonenumberInput"
+                required />
             skypeid:<input type="text" placeholder="Skype ID" name="skypeid" id="skypeidInput" required />
             <input type="submit" name="submit" onclick="submitForm()" value="submit" class="btn-primary" />
         </form>
     </div>
-    <div class="popup" id="popupForEdit" >
-        <form  id="editDetailsForm">
-            
+    <div class="popup" id="popupForEdit">
+        <form id="editDetailsForm">
+
         </form>
     </div>
 

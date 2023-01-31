@@ -1,28 +1,24 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './mycomponents/search/search.component';
 import { HeaderComponent } from './mycomponents/header/header.component';
 import { FiltersComponent } from './mycomponents/filters/filters.component';
 import { RouterModule,Routes } from '@angular/router';
-import { NotfoundComponent } from './mycomponents/notfound/notfound.component';
-import { TestService } from './test.service';
-import { TestPipe } from './test.pipe';
+import { DataService } from './data.service';
+import { DataPipe } from './data.pipe';
 import { CreateComponent } from './mycomponents/create/create.component';
-import { EditComponent } from './mycomponents/edit/edit.component';
-import { EmployeesComponent } from './mycomponents/employees/employees.component';
-
+import { CardContainerComponent } from './mycomponents/card-container/card-container.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 const routes:Routes=[
   {
     path:'header',component:HeaderComponent
   },
-
-  
   {
     path:'filters',component:FiltersComponent
   },
@@ -30,43 +26,33 @@ const routes:Routes=[
     path:'search',component:SearchComponent
   },
   {
-    path:'employees',component:EmployeesComponent
+    path:'card-container',component:CardContainerComponent
   },
   {
     path:'create',component:CreateComponent
   },
-  {
-    path:'edit',component:EditComponent
-  },
-  {
-    path:"**",component:NotfoundComponent
-  },
 
 ]
-
-
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     HeaderComponent,
-    FiltersComponent, 
-    NotfoundComponent,
-    TestPipe,
-    EmployeesComponent,
+    FiltersComponent,
+    DataPipe,
+    CardContainerComponent,
     CreateComponent,
-    EditComponent
-
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    Ng2SearchPipeModule
   ],
-  providers: [TestService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

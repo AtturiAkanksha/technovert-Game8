@@ -1,1 +1,98 @@
-<p>search works!</p>
+<div class="d-flex ml-4">
+    <button class="btn btn-primary ml-2" (click)="clickBtnAll($event)">*</button>
+    <button class="btn btn-primary ml-2"  *ngFor="let alphabet of alphabets" (click)="clickAlphabet($event)" >{{alphabet | uppercase}}</button>
+
+</div>
+<div class="d-flex ml-4">
+    <div class="">
+        <label for="">search:</label>
+        <input type="text" id="searchbar" placeholder="enter any keyword" [(ngModel)]="enterinput"
+            (keyup)="onKeyUp($event)">
+        <p>{{value}}</p>
+    </div>
+    <div>
+        <button class="btn btn-success ml-4" (click)="clear()">clear</button>
+    </div>
+    <div class="d-flex ml-4">
+        <label for="filters">filter by:</label>
+        <select name="filters" id="filters" class="form-control " [(ngModel)]="filteredOption">
+            <option>firstname</option>
+            <option>lastname</option>
+            <option>jobtitle</option>
+            <option>department</option>
+            <option>office</option>
+            <option>phonenumber</option>
+            <option>email</option>
+            <option>skypeid</option>
+        </select>
+    </div>
+    <div class="div-right">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"
+            (click)="openModal()">
+            Add Employee
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="createForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Enter New Employee Details</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form [formGroup]="regForm">
+                            <div class="d-flex" class="form-group">
+                                <label for="firstnameInput">firstname:</label>
+                                <input #firstname type="text" class="form-control" placeholder="firstname"
+                                    name="firstname" id="firstnameInput" formControlName="firstname" required />
+                            </div>
+                            <div class="d-flex" class="form-group">
+                                <label for="lastnameInput">lastname:</label>
+                                <input #lastname type="text" class="form-control" placeholder="lastname" name="lastname"
+                                    id="lastnameInput" formControlName="lastname" required />
+                            </div>
+                            <div class="d-flex" class="form-group">
+                                <label for="emailInput">email:</label>
+                                <input type="email" placeholder="email" name="email" id="emailInput"
+                                    class="form-control" formControlName="email" required />
+                            </div>
+                            <div class="d-flex" class="form-group">
+                                <label for="jobtitleInput">jobtitle:</label>
+                                <input type="text" placeholder="Job Title" name="jobtitle" class="form-control"
+                                    id="jobtitleInput" formControlName="jobtitle" required />
+                            </div>
+                            <div class="d-flex" class="form-group">
+                                <label for="">office:</label>
+                                <input type="text" placeholder="Office" name="office" id="officeInput"
+                                    class="form-control" formControlName="office" required />
+                            </div>
+                            <div class="d-flex" class="form-group">
+                                <label for="">department:</label>
+                                <input type="text" placeholder="Department" class="form-control" name="department"
+                                    id="departmentInput" formControlName="department" required />
+                            </div>
+                            <div class="d-flex" class="form-group">
+                                <label for="">phonenum:</label>
+                                <input type="number" placeholder="Phone Number" name="phonenumber" id="phonenumberInput"
+                                    class="form-control" formControlName="phonenumber" required />
+                            </div>
+                            <div class="d-flex" class="form-group">
+                                <label for="">skypeid:</label>
+                                <input type="text" placeholder="Skype ID" name="skypeid" id="skypeidInput"
+                                    class="form-control" formControlName="skypeid" required />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                            (click)="closeModal()">Close</button>
+                        <button type="button" class="btn btn-primary" (click)="save()">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <p class="text-small ml-4 mt-4"><b>Note:</b>please use the advanced filter options to refine your results.</p>
+</div>

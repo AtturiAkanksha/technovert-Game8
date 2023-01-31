@@ -1,0 +1,31 @@
+.d-flex{
+   
+    display: flex;
+   
+}
+.ml-4{
+    margin-left: 4rem;
+}
+.div-right{
+   margin-left: 10vw; 
+
+}
+
+.ml-2{
+    margin-left: 2px;
+    margin-bottom: 13px;
+}
+/* .modal-body label{
+    float: right;
+    width: 130px;
+    
+} */
+.modal-body input{
+    width:100%;
+    height:2rem;
+    padding-left: 20px;
+   
+}
+.modal-content{
+    background:rgb(113, 184, 206);
+}

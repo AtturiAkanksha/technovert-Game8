@@ -1,4 +1,4 @@
-//filters
+ //filters
 const list1 = document.querySelector('.list1');
 list1.addEventListener('click', handleClick);
 const list2 = document.querySelector('.list2');
