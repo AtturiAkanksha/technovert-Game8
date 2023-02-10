@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +6,9 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  imagepath:any;
+  
+  imagepath:any='/assets/images/th (2).jpg/';
 
   constructor(){
-    this.imagepath='/assets/images/th (2).jpg/'
   }
 }

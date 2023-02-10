@@ -1,18 +1,16 @@
 import { Component } from '@angular/core';
-import { DataService } from 'src/app/data.service';
+import { EmployeeDataService } from 'src/app/dataservice';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers:[DataService]
+  providers:[EmployeeDataService]
 })
 export class AppComponent {
+  title: any;
 
-  constructor(private dataService:DataService){
+  constructor(private employeeDataService:EmployeeDataService){
   }
-  title(title: any) {
-    throw new Error('Method not implemented.');
-  }
- 
+  
 }

@@ -1,56 +1,33 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SearchComponent } from './mycomponents/search/search.component';
-import { HeaderComponent } from './mycomponents/header/header.component';
-import { FiltersComponent } from './mycomponents/filters/filters.component';
-import { RouterModule,Routes } from '@angular/router';
-import { DataService } from './data.service';
-import { DataPipe } from './data.pipe';
-import { CreateComponent } from './mycomponents/create/create.component';
-import { CardContainerComponent } from './mycomponents/card-container/card-container.component';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { SearchComponent } from './components/search/search.component';
+import { CardContainerComponent } from './components/card-container/card-container.component';
+import { FormComponent } from './components/form/form.component';
+import { FiltersComponent } from './components/filters/filters.component';
+import { HeaderComponent } from './components/header/header.component';
 
-
-const routes:Routes=[
-  {
-    path:'header',component:HeaderComponent
-  },
-  {
-    path:'filters',component:FiltersComponent
-  },
-  {
-    path:'search',component:SearchComponent
-  },
-  {
-    path:'card-container',component:CardContainerComponent
-  },
-  {
-    path:'create',component:CreateComponent
-  },
-
-]
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    HeaderComponent,
-    FiltersComponent,
-    DataPipe,
     CardContainerComponent,
-    CreateComponent,
+    FormComponent,
+    FiltersComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes),
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
